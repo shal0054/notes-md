@@ -11,10 +11,10 @@ function materializeInit() {
 }
 
 function addListeners() {
-  let nextBtn = document.getElementById('nextBtn');
+  let nextBtnGen = document.getElementById('nextBtn-gen');
 
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
+  if (nextBtnGen) {
+    nextBtnGen.addEventListener('click', () => {
       let presFor = document.getElementById('presented-for').value;
 
       switch (presFor) {
