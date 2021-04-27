@@ -11,17 +11,24 @@ function materializeInit() {
 }
 
 function addListeners() {
+  let allSections = document.querySelectorAll('section');
+
+  let generalSection = document.getElementById('general');
   let nextBtnGen = document.getElementById('nextBtn-gen');
+
+  let assessmentSection = document.getElementById('assessment');
   let backBtnAsses = document.getElementById('backBtn-asses');
   let nextBtnAsses = document.getElementById('nextBtn-asses');
-  let backBtnFolUp = document.getElementById('backBtn-folUp');
-  let backBtnPhysExam = document.getElementById('backBtn-physExam');
 
-  let allSections = document.querySelectorAll('section');
-  let generalSection = document.getElementById('general');
-  let assessmentSection = document.getElementById('assessment');
   let followUpSection = document.getElementById('follow-up');
+  let backBtnFolUp = document.getElementById('backBtn-folUp');
+
   let physicalExamSection = document.getElementById('physical-exam');
+  let nextBtnPhysExam = document.getElementById('nextBtn-physExam');
+  let backBtnPhysExam = document.getElementById('backBtn-physExam');
+  
+  let investigationsSection = document.getElementById('investigations');
+  let backBtnInves = document.getElementById('backBtn-inves');
 
   if (nextBtnGen) {
     nextBtnGen.addEventListener('click', () => {
@@ -91,6 +98,28 @@ function addListeners() {
       });
 
       assessmentSection.classList.remove('hidden');
+    });
+  }
+
+  if (nextBtnPhysExam) {
+    nextBtnPhysExam.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+      // display section
+      investigationsSection.classList.remove('hidden');
+    });
+  }
+
+  if (backBtnInves) {
+    backBtnInves.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+
+      physicalExamSection.classList.remove('hidden');
     });
   }
 }
