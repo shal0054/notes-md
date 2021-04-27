@@ -13,12 +13,15 @@ function materializeInit() {
 function addListeners() {
   let nextBtnGen = document.getElementById('nextBtn-gen');
   let backBtnAsses = document.getElementById('backBtn-asses');
-  let backBtnFolUp = document.getElementById('backBtn-folUp')
+  let nextBtnAsses = document.getElementById('nextBtn-asses');
+  let backBtnFolUp = document.getElementById('backBtn-folUp');
+  let backBtnPhysExam = document.getElementById('backBtn-physExam');
 
   let allSections = document.querySelectorAll('section');
   let generalSection = document.getElementById('general');
   let assessmentSection = document.getElementById('assessment');
   let followUpSection = document.getElementById('follow-up');
+  let physicalExamSection = document.getElementById('physical-exam');
 
   if (nextBtnGen) {
     nextBtnGen.addEventListener('click', () => {
@@ -51,7 +54,6 @@ function addListeners() {
     backBtnAsses.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        console.log(section);
         section.classList.add('hidden');
       });
 
@@ -59,15 +61,36 @@ function addListeners() {
     });
   }
 
+  if (nextBtnAsses) {
+    nextBtnAsses.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+
+      physicalExamSection.classList.remove('hidden');
+    });
+  }
+
   if (backBtnFolUp) {
     backBtnFolUp.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        console.log(section);
         section.classList.add('hidden');
       });
 
       generalSection.classList.remove('hidden');
+    });
+  }
+
+  if (backBtnPhysExam) {
+    backBtnPhysExam.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+
+      assessmentSection.classList.remove('hidden');
     });
   }
 }
