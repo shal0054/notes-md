@@ -15,16 +15,29 @@ function addListeners() {
 
   if (nextBtnGen) {
     nextBtnGen.addEventListener('click', () => {
-      let presFor = document.getElementById('presented-for').value;
+      let presentedFor = document.getElementById('presented-for').value;
+      let generalSection = document.getElementById('general');
+      let assessmentSection = document.getElementById('assessment');
+      let followUpSection = document.getElementById('follow-up');
+      let allSections = document.querySelectorAll('section');
 
-      switch (presFor) {
+      switch (presentedFor) {
         case 'assessment':
-          // go to assessment page
-          location.href = './assessment.html';
+          // hide all sections
+          allSections.forEach((section) => {
+            section.classList.add('hidden');
+          });
+          // show assessment screen
+          assessmentSection.classList.remove('hidden');
           break;
-        case 'follow-up':
-          // go to follow up page
-          location.href = './follow-up.html';
+          case 'follow-up':
+            // hide all sections
+            allSections.forEach((section) => {
+              section.classList.add('hidden');
+            });
+            // show follow up screen
+            followUpSection.classList.remove('hidden');
+
           break;
         default:
         // display warning

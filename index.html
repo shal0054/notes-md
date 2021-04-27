@@ -15,47 +15,196 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>General info</h1>
+  <section id="general">
+    <div class="container">
+      <h1>General info</h1>
 
-    <div class="row">
-      <form class="col s12">
+      <div class="row">
+        <form class="col s12">
 
-        <div class="row">
-          <div class="input-field col s1">
-            <select id="salutation">
-              <option value="Mr." selected>Mr.</option>
-              <option value="Ms.">Ms.</option>
-              <option value="Mrs.">Mrs.</option>
-            </select>
+          <div class="row">
+            <div class="input-field col s1">
+              <select id="salutation">
+                <option value="Mr." selected>Mr.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Mrs.">Mrs.</option>
+              </select>
+            </div>
+            <div class="input-field col s6">
+              <input id="name" type="text" class="validate">
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s1">
+              <input id="age" type="number" class="validate">
+              <label for="age">Age</label>
+            </div>
           </div>
-          <div class="input-field col s6">
-            <input id="name" type="text" class="validate">
-            <label for="name">Name</label>
-          </div>
-          <div class="input-field col s1">
-            <input id="age" type="number" class="validate">
-            <label for="age">Age</label>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="input-fi col s6">
-            <select id="presented-for">
-              <option value="" disabled selected>Presented for</option>
-              <option value="assessment">Assessment</option>
-              <option value="follow-up">Follow up</option>
-            </select>
+          <div class="row">
+            <div class="input-fi col s6">
+              <select id="presented-for">
+                <option value="" disabled selected>Presented for</option>
+                <option value="assessment">Assessment</option>
+                <option value="follow-up">Follow up</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <a id="nextBtn-gen" class="waves-effect waves-light btn">Next</a>
+          <a id="nextBtn-gen" class="waves-effect waves-light btn">Next</a>
+
+      </div>
+
+      </form>
+    </div>
+  </section>
+
+  <section id="assessment" class="hidden">
+    <div class="container">
+      <h1>Assessment</h1>
+
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <p class="groupLabel">Cardiovascular risk</p>
+            <p>
+              <label for="smoking">
+                <input id="smoking" type="checkbox" />
+                <span>Smoking</span>
+              </label>
+            </p>
+            <p>
+              <label for="dyslipidemia">
+                <input id="dyslipidemia" type="checkbox" />
+                <span>Dyslipidemia</span>
+              </label>
+            </p>
+            <p>
+              <label for="diabetes">
+                <input id="diabetes" type="checkbox" />
+                <span>Diabetes</span>
+              </label>
+            </p>
+            <p>
+              <label for="hypertension">
+                <input id="hypertension" type="checkbox" />
+                <span>Hypertension</span>
+              </label>
+            </p>
+            <p>
+              <label for="cad">
+                <input id="cad" type="checkbox" />
+                <span>Family history of premature CAD</span>
+              </label>
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">Other past medical history</p>
+            <p>
+              <label for="hypothyroidism">
+                <input id="hypothyroidism" type="checkbox" />
+                <span>Hypothyroidism</span>
+              </label>
+            </p>
+            <p>
+              <label for="dyslipidemia">
+                <input id="dyslipidemia" type="checkbox" />
+                <span>Dyslipidemia</span>
+              </label>
+            </p>
+            <p>
+              <label for="heart-failure">
+                <input id="heart-failure" type="checkbox" />
+                <span>Heart Failure</span>
+              </label>
+            </p>
+            <p>
+              <label for="cva">
+                <input id="cva" type="checkbox" />
+                <span>CVA</span>
+              </label>
+            </p>
+            <p>
+              <label for="pe">
+                <input id="pe" type="checkbox" />
+                <span>PE</span>
+              </label>
+            </p>
+            <p>
+              <label for="bronchial-asthma">
+                <input id="bronchial-asthma" type="checkbox" />
+                <span>Bronchial Asthma</span>
+              </label>
+            </p>
+            <p>
+              <label for="osteoarthritis">
+                <input id="osteoarthritis" type="checkbox" />
+                <span>Osteoarthritis</span>
+              </label>
+            </p>
+            <p>
+              <label for="TIA">
+                <input id="TIA" type="checkbox" />
+                <span>TIA</span>
+              </label>
+            </p>
+            <p>
+              <label for="dvt">
+                <input id="dvt" type="checkbox" />
+                <span>DVT</span>
+              </label>
+            </p>
+            <p>
+              <label for="copd">
+                <input id="copd" type="checkbox" />
+                <span>COPD</span>
+              </label>
+            </p>
+
+            <p>
+              <label for="other">
+                <input id="other" type="checkbox" />
+                <span>
+                  <label for="other-text">Other</label>
+                  <input id="other-text" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">Regarding</p>
+            <p>
+              <label for="chest-pain">
+                <input id="chest-pain" type="radio" name="group1" />
+                <span>Chest pain</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-regarding">
+                <input id="other-regarding" type="radio" name="group1" />
+                <span> <span>
+                    <label for="other-text">Other</label>
+                    <input id="other-text" type="text" class="validate">
+                  </span></span>
+              </label>
+            </p>
+          </div>
+          <a id="backBtn-asses" class="waves-effect waves-light btn">Back</a>
+          <a id="nextBtn-asses" class="waves-effect waves-light btn">Next</a>
+        </form>
+      </div>
 
     </div>
+  </section>
 
-    </form>
-  </div>
-  </div>
+  <section id="follow-up" class="hidden">
+    <div class="container">
+      <h1>Follow up</h1>
+    </div>
+  </section>
+
 </body>
 
 </html>

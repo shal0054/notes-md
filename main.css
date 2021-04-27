@@ -4,3 +4,6 @@ body {
 .groupLabel{
   font-size:larger
 }
+.hidden {
+  display:none;
+}
