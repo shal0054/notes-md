@@ -13,6 +13,7 @@ function materializeInit() {
 function addListeners() {
   let nextBtnGen = document.getElementById('nextBtn-gen');
   let backBtnAsses = document.getElementById('backBtn-asses');
+  let backBtnFolUp = document.getElementById('backBtn-folUp')
 
   let allSections = document.querySelectorAll('section');
   let generalSection = document.getElementById('general');
@@ -48,6 +49,18 @@ function addListeners() {
 
   if (backBtnAsses) {
     backBtnAsses.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        console.log(section);
+        section.classList.add('hidden');
+      });
+
+      generalSection.classList.remove('hidden');
+    });
+  }
+
+  if (backBtnFolUp) {
+    backBtnFolUp.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
         console.log(section);
