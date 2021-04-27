@@ -210,13 +210,133 @@
         <a id="backBtn-folUp" class="waves-effect waves-light btn">Back</a>
         <a id="nextBtn-folUp" class="waves-effect waves-light btn">Next</a>
       </div>
-      
+
     </div>
   </section>
 
   <section id="physical-exam" class="hidden">
     <div class="container">
       <h1>Physical Exam</h1>
+
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+
+            <div class="input-field col s3">
+              <input id="bloodPressure" type="text" class="validate">
+              <label for="bloodPressure">Blood Pressure</label>
+            </div>
+
+            <div class="input-field col s3">
+              <input id="pulseRate" type="text" class="validate">
+              <label for="pulseRate">Pulse Rate</label>
+            </div>
+
+            <div class="input-field col s3">
+              <input id="oSat" type="text" class="validate">
+              <label for="oSat">Oxygen Saturation</label>
+            </div>
+
+          </div>
+
+            <div class="row">
+              <p class="groupLabel">CV Exam</p>
+              <p>
+                <label for="loudS1">
+                  <input id="loudS1" type="checkbox" />
+                  <span>Loud S1</span>
+                </label>
+              </p>
+              <p>
+                <label for="loudS2">
+                  <input id="loudS2" type="checkbox" />
+                  <span>Loud S2</span>
+                </label>
+              </p>
+              <p>
+                <label for="diminishedS1">
+                  <input id="diminishedS1" type="checkbox" />
+                  <span>Diminished S1</span>
+                </label>
+              </p>
+              <p>
+                <label for="diminishedS2">
+                  <input id="diminishedS2" type="checkbox" />
+                  <span>Diminished S2</span>
+                </label>
+              </p>
+              <p>
+                <label for="s3">
+                  <input id="s3" type="checkbox" />
+                  <span>S3</span>
+                </label>
+              </p>
+              <p>
+                <label for="s4">
+                  <input id="s4" type="checkbox" />
+                  <span>S4</span>
+                </label>
+              </p>
+              <p>
+                <label for="esm1">
+                  <input id="esm1" type="checkbox" />
+                  <span>ESM over base. Not radiating</span>
+                </label>
+              </p>
+              <p>
+                <label for="esm2">
+                  <input id="esm2" type="checkbox" />
+                  <span>ESM over base radiating to carotids</span>
+                </label>
+              </p>
+              <p>
+                <label for="esm3">
+                  <input id="esm3" type="checkbox" />
+                  <span>ESM over left sternal edge with no relation to Valsalva</span>
+                </label>
+              </p>
+              <p>
+                <label for="esm4">
+                  <input id="esm4" type="checkbox" />
+                  <span>ESM over left sternal edge that increases with Valsalva</span>
+                </label>
+              </p>
+              <p>
+                <label for="psm1">
+                  <input id="psm1" type="checkbox" />
+                  <span>PSM, not radiating</span>
+                </label>
+              </p>
+              <p>
+                <label for="psm2">
+                  <input id="psm2" type="checkbox" />
+                  <span>PSM radiating to the axilla</span>
+                </label>
+              </p>
+              <p>
+                <label for="jvd">
+                  <input id="jvd" type="checkbox" />
+                  <span>JVD</span>
+                </label>
+              </p>
+              <p>
+                <label for="lls">
+                  <input id="lls" type="checkbox" />
+                  <span>Lower limb swelling</span>
+                </label>
+              </p>
+              <p>
+                <label for="other-cve">
+                  <input id="other-cve" type="checkbox" />
+                  <span>
+                    <label for="other-cveText">Other</label>
+                    <input id="other-cveText" type="text" class="validate">
+                  </span>
+                </label>
+              </p>
+
+        </form>
+      </div>
 
       <div class="buttons">
         <a id="backBtn-physExam" class="waves-effect waves-light btn">Back</a>
