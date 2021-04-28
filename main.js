@@ -35,6 +35,10 @@ function addListeners() {
   let nextBtnChestPain = document.getElementById('nextBtn-chestPain');
   let backBtnChestPain = document.getElementById('backBtn-chestPain');
 
+  let impressPlanSection = document.getElementById('impression-plan');
+  let nextBtnImpresPlan = document.getElementById('nextBtn-impressPlan');
+  let backBtnImpresPlan = document.getElementById('backBtn-impressPlan');
+
   if (nextBtnGen) {
     nextBtnGen.addEventListener('click', () => {
       let presentedFor = document.getElementById('presented-for').value;
@@ -147,6 +151,28 @@ function addListeners() {
       });
 
       investigationsSection.classList.remove('hidden');
+    });
+  }
+
+  if (nextBtnChestPain) {
+    nextBtnChestPain.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+      // display section
+      impressPlanSection.classList.remove('hidden');
+    });
+  }
+
+  if (backBtnImpresPlan) {
+    backBtnImpresPlan.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+
+      chestPainSection.classList.remove('hidden');
     });
   }
 }
