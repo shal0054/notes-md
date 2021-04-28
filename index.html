@@ -588,7 +588,7 @@
           <div class="row">
             <div class="input-field col s4">
               <input id="stressTest" type="text" class="validate">
-              <label for="stressTest">Stress test</label>
+              <label for="stressTest">Stress Test</label>
             </div>
           </div>
 
@@ -603,14 +603,235 @@
     </div>
   </section>
 
-  <section id="chest-pain" class="hidden">
+  <section id="chest-pain-sec" class="hidden">
     <div class="container">
       <h1>Chest Pain</h1>
 
-      <div class="buttons">
-        <a id="backBtn-chestPain" class="waves-effect waves-light btn">Back</a>
-        <a id="nextBtn-chestPain" class="waves-effect waves-light btn">Next</a>
-      </div>
+      <div class="row">
+        <form class="col s12">
+
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="whenPain" type="text" class="validate">
+              <label for="whenPain">When was the pain first felt?</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">What did the pain feel like?</p>
+            <p>
+              <label for="sharp">
+                <input id="sharp" type="checkbox" />
+                <span>Sharp</span>
+              </label>
+            </p>
+            <p>
+              <label for="dull">
+                <input id="dull" type="checkbox" />
+                <span>Dull</span>
+              </label>
+            </p>
+            <p>
+              <label for="squeezing">
+                <input id="squeezing" type="checkbox" />
+                <span>Squeezing</span>
+              </label>
+            </p>
+            <p>
+              <label for="heaviness">
+                <input id="heaviness" type="checkbox" />
+                <span>Heaviness</span>
+              </label>
+            </p>
+            <p>
+              <label for="stabbing">
+                <input id="stabbing" type="checkbox" />
+                <span>Stabbing</span>
+              </label>
+            </p>
+            <p>
+              <label for="constricting">
+                <input id="constricting" type="checkbox" />
+                <span>Constricting</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-pain">
+                <input id="other-pain" type="checkbox" />
+                <span>
+                  <label for="other-painText">Other</label>
+                  <input id="other-painText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">How long did the pain last?</p>
+            <p>
+              <label for="stillThere">
+                <input id="stillThere" type="radio" name="group2"/>
+                <span>Still there</span>
+              </label>
+            </p>
+            <p>
+              <label for="waxWan">
+                <input id="waxWan" type="radio" name="group2"/>
+                <span>Waxing and Wanning</span>
+              </label>
+            </p>
+            <p>
+              <label for="fewMin">
+                <input id="fewMin" type="radio" name="group2"/>
+                <span>Few minutes</span>
+              </label>
+            </p>
+            <p>
+              <label for="fewHours">
+                <input id="fewHours" type="radio" name="group2"/>
+                <span>Few hours</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-painTime">
+                <input id="other-painTime" type="radio" name="group2"/>
+                <span>
+                  <label for="other-painTimeText">Other</label>
+                  <input id="other-painTimeText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">How often does the pain occur?</p>
+            <p>
+              <label for="stillThere-checkbox">
+                <input id="stillThere-checkbox" type="checkbox" />
+                <span>Still There</span>
+              </label>
+            </p>
+            <p>
+              <label for="once">
+                <input id="once" type="checkbox" />
+                <span>Once</span>
+              </label>
+            </p>
+            <p>
+              <label for="twice">
+                <input id="twice" type="checkbox" />
+                <span>Twice</span>
+              </label>
+            </p>
+            <p>
+              <label for="threeTimes">
+                <input id="threeTimes" type="checkbox" />
+                <span>3 Times</span>
+              </label>
+            </p>
+            <p>
+              <label for="everyFewMin">
+                <input id="everyFewMin" type="checkbox" />
+                <span>Every few minutes</span>
+              </label>
+            </p>
+            <p>
+              <label for="everyFewHours">
+                <input id="everyFewHours" type="checkbox" />
+                <span>Every few hours</span>
+              </label>
+            </p>
+            <p>
+              <label for="everyFewDays">
+                <input id="everyFewDays" type="checkbox" />
+                <span>Every few days</span>
+              </label>
+            </p>
+            <p>
+              <label for="everyFewWeeks">
+                <input id="everyFewWeeks" type="checkbox" />
+                <span>Every few weeks</span>
+              </label>
+            </p>
+            <p>
+              <label for="everyFewMonths">
+                <input id="everyFewMonths" type="checkbox" />
+                <span>Every few months</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-painOften">
+                <input id="other-painOften" type="checkbox" />
+                <span>
+                  <label for="other-painOftenText">Other</label>
+                  <input id="other-painOftenText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">Exertion</p>
+            <p>
+              <label for="exertion">
+                <input id="exertion" type="checkbox" />
+                <span>Exertion</span>
+              </label>
+            </p>
+            <p>
+              <label for="position">
+                <input id="position" type="checkbox" />
+                <span>Position</span>
+              </label>
+            </p>
+            <p>
+              <label for="respiration">
+                <input id="respiration" type="checkbox" />
+                <span>Respiration</span>
+              </label>
+            </p>
+            <p>
+              <label for="meals">
+                <input id="meals" type="checkbox" />
+                <span>Meals</span>
+              </label>
+            </p>
+            <p>
+              <label for="swallowing">
+                <input id="swallowing" type="checkbox" />
+                <span>Swallowing</span>
+              </label>
+            </p>
+            <p>
+              <label for="palpation">
+                <input id="palpation" type="checkbox" />
+                <span>Palpation</span>
+              </label>
+            </p>
+            <p>
+              <label for="arm-movement">
+                <input id="arm-movement" type="checkbox" />
+                <span>Arm Movement</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-exertion">
+                <input id="other-exertion" type="checkbox" />
+                <span>
+                  <label for="other-exertionText">Other</label>
+                  <input id="other-exertionText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="buttons">
+            <a id="backBtn-chestPain" class="waves-effect waves-light btn">Back</a>
+            <a id="nextBtn-chestPain" class="waves-effect waves-light btn">Next</a>
+          </div>
+
+        </form>  
+      </div>  
 
     </div>
   </section>

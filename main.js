@@ -28,7 +28,12 @@ function addListeners() {
   let backBtnPhysExam = document.getElementById('backBtn-physExam');
   
   let investigationsSection = document.getElementById('investigations');
+  let nextBtnInves = document.getElementById('nextBtn-inves');
   let backBtnInves = document.getElementById('backBtn-inves');
+  
+  let chestPainSection = document.getElementById('chest-pain-sec');
+  let nextBtnChestPain = document.getElementById('nextBtn-chestPain');
+  let backBtnChestPain = document.getElementById('backBtn-chestPain');
 
   if (nextBtnGen) {
     nextBtnGen.addEventListener('click', () => {
@@ -120,6 +125,28 @@ function addListeners() {
       });
 
       physicalExamSection.classList.remove('hidden');
+    });
+  }
+
+  if (nextBtnInves) {
+    nextBtnInves.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+      // display section
+      chestPainSection.classList.remove('hidden');
+    });
+  }
+
+  if (backBtnChestPain) {
+    backBtnChestPain.addEventListener('click', () => {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+
+      investigationsSection.classList.remove('hidden');
     });
   }
 }
