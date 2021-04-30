@@ -12,25 +12,24 @@ function materializeInit() {
 
 function addListeners() {
   let allSections = document.querySelectorAll('section');
-
+  // let presentedFor = document.getElementById('presented-for');
   let generalSection = document.getElementById('general');
-  let nextBtnGen = document.getElementById('nextBtn-gen');
 
   let assessmentSection = document.getElementById('assessment');
   let backBtnAsses = document.getElementById('backBtn-asses');
   let nextBtnAsses = document.getElementById('nextBtn-asses');
 
-  let followUpSection = document.getElementById('follow-up');
+  let followUpSection = document.getElementById('follow-up-section');
   let backBtnFolUp = document.getElementById('backBtn-folUp');
 
   let physicalExamSection = document.getElementById('physical-exam');
   let nextBtnPhysExam = document.getElementById('nextBtn-physExam');
   let backBtnPhysExam = document.getElementById('backBtn-physExam');
-  
+
   let investigationsSection = document.getElementById('investigations');
   let nextBtnInves = document.getElementById('nextBtn-inves');
   let backBtnInves = document.getElementById('backBtn-inves');
-  
+
   let chestPainSection = document.getElementById('chest-pain-sec');
   let nextBtnChestPain = document.getElementById('nextBtn-chestPain');
   let backBtnChestPain = document.getElementById('backBtn-chestPain');
@@ -39,32 +38,17 @@ function addListeners() {
   let nextBtnImpresPlan = document.getElementById('nextBtn-impressPlan');
   let backBtnImpresPlan = document.getElementById('backBtn-impressPlan');
 
-  if (nextBtnGen) {
-    nextBtnGen.addEventListener('click', () => {
-      let presentedFor = document.getElementById('presented-for').value;
-      switch (presentedFor) {
-        case 'assessment':
-          // hide all sections
-          allSections.forEach((section) => {
-            section.classList.add('hidden');
-          });
-          // show assessment screen
-          assessmentSection.classList.remove('hidden');
-          break;
-        case 'follow-up':
-          // hide all sections
-          allSections.forEach((section) => {
-            section.classList.add('hidden');
-          });
-          // show follow up screen
-          followUpSection.classList.remove('hidden');
-
-          break;
-        default:
-        // display warning
-      }
-    });
-  }
+  let regarding = document.getElementById('regarding');
+  let assessment = document.getElementById('assessment');
+  let followUp = document.getElementById('follow-up');
+  assessment.addEventListener('click', () => {
+    regarding.classList.remove('hidden');
+    followUpSection.classList.add('hidden');
+  });
+  followUp.addEventListener('click', () => {
+    followUpSection.classList.remove('hidden');
+    regarding.classList.add('hidden');
+  });
 
   if (backBtnAsses) {
     backBtnAsses.addEventListener('click', () => {

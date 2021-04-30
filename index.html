@@ -23,7 +23,7 @@
         <form class="col s12">
 
           <div class="row">
-            <div class="input-field col s1">
+            <div class="input-field col s2">
               <select id="salutation">
                 <option value="Mr." selected>Mr.</option>
                 <option value="Ms.">Ms.</option>
@@ -40,17 +40,40 @@
             </div>
           </div>
 
-          <div class="row">
-            <div class="input-fi col s6">
-              <select id="presented-for">
-                <option value="" disabled selected>Presented for</option>
-                <option value="assessment">Assessment</option>
-                <option value="follow-up">Follow up</option>
-              </select>
-            </div>
+          <div class="row" id="presented-for">
+            <p class="groupLabel">Presented for</p>
+            <p>
+              <label for="assessment">
+                <input id="assessment" type="radio" name="presented-for"/>
+                <span>Assessment</span>
+              </label>
+            </p>
+            <p>
+              <label for="follow-up">
+                <input id="follow-up" type="radio" name="presented-for"/>
+                <span>Follow up</span>
+              </label>
+            </p>
           </div>
 
-          <a id="nextBtn-gen" class="waves-effect waves-light btn">Next</a>
+          <div id="regarding" class="row hidden">
+            <p class="groupLabel">Regarding</p>
+            <p>
+              <label for="chest-pain">
+                <input id="chest-pain" type="radio" name="regarding" />
+                <span>Chest pain</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-regarding">
+                <input id="other-regarding" type="radio" name="regarding" />
+                <span> <span>
+                    <label for="other-text">Other</label>
+                    <input id="other-text" type="text" class="validate">
+                  </span></span>
+              </label>
+            </p>
+          </div>
 
       </div>
 
@@ -202,7 +225,7 @@
     </div>
   </section>
 
-  <section id="follow-up" class="hidden">
+  <section id="follow-up-section" class="hidden">
     <div class="container">
       <h1>Follow up</h1>
 
