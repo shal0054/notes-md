@@ -4,3 +4,6 @@ body {
 .groupLabel {
   font-size: larger;
 }
+nav {
+  padding-left: 1rem;
+}
