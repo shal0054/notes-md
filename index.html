@@ -44,22 +44,22 @@
             <p class="groupLabel">Presented for</p>
             <p>
               <label for="assessment">
-                <input id="assessment" type="radio" name="presented-for"/>
+                <input id="assessment" type="radio" name="presented-for" />
                 <span>Assessment</span>
               </label>
             </p>
             <p>
               <label for="follow-up">
-                <input id="follow-up" type="radio" name="presented-for"/>
+                <input id="follow-up" type="radio" name="presented-for" />
                 <span>Follow up</span>
               </label>
             </p>
           </div>
 
-          <div id="regarding" class="row hidden">
+          <div id="regarding" class="row hide">
             <p class="groupLabel">Regarding</p>
             <p>
-              <label for="chest-pain">
+              <label for="chest-pain-gen">
                 <input id="chest-pain-gen" type="radio" name="regarding" />
                 <span>Chest pain</span>
               </label>
@@ -81,7 +81,7 @@
     </div>
   </section>
 
-  <section id="assessment" class="hidden">
+  <section id="assessment-sec" class="hide">
     <div class="container">
       <h1>Assessment</h1>
 
@@ -196,25 +196,6 @@
 
           </div>
 
-          <div class="row">
-            <p class="groupLabel">Regarding</p>
-            <p>
-              <label for="chest-pain">
-                <input id="chest-pain" type="radio" name="group1" />
-                <span>Chest pain</span>
-              </label>
-            </p>
-            <p>
-              <label for="other-regarding">
-                <input id="other-regarding" type="radio" name="group1" />
-                <span> <span>
-                    <label for="other-text">Other</label>
-                    <input id="other-text" type="text" class="validate">
-                  </span></span>
-              </label>
-            </p>
-          </div>
-
           <div class="buttons">
             <a id="backBtn-asses" class="waves-effect waves-light btn">Back</a>
             <a id="nextBtn-asses" class="waves-effect waves-light btn">Next</a>
@@ -225,7 +206,7 @@
     </div>
   </section>
 
-  <section id="follow-up-section" class="hidden">
+  <section id="follow-up-sec" class="hide">
     <div class="container">
       <h1>Follow up</h1>
 
@@ -237,395 +218,7 @@
     </div>
   </section>
 
-  <section id="physical-exam" class="hidden">
-    <div class="container">
-      <h1>Physical Exam</h1>
-
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-
-            <div class="input-field col s3">
-              <input id="bloodPressure" type="text" class="validate">
-              <label for="bloodPressure">Blood Pressure</label>
-            </div>
-
-            <div class="input-field col s3">
-              <input id="pulseRate" type="text" class="validate">
-              <label for="pulseRate">Pulse Rate</label>
-            </div>
-
-            <div class="input-field col s3">
-              <input id="oSat" type="text" class="validate">
-              <label for="oSat">Oxygen Saturation</label>
-            </div>
-
-          </div>
-
-          <div class="row">
-            <p class="groupLabel">CV Exam</p>
-            <p>
-              <label for="loudS1">
-                <input id="loudS1" type="checkbox" />
-                <span>Loud S1</span>
-              </label>
-            </p>
-            <p>
-              <label for="loudS2">
-                <input id="loudS2" type="checkbox" />
-                <span>Loud S2</span>
-              </label>
-            </p>
-            <p>
-              <label for="diminishedS1">
-                <input id="diminishedS1" type="checkbox" />
-                <span>Diminished S1</span>
-              </label>
-            </p>
-            <p>
-              <label for="diminishedS2">
-                <input id="diminishedS2" type="checkbox" />
-                <span>Diminished S2</span>
-              </label>
-            </p>
-            <p>
-              <label for="s3">
-                <input id="s3" type="checkbox" />
-                <span>S3</span>
-              </label>
-            </p>
-            <p>
-              <label for="s4">
-                <input id="s4" type="checkbox" />
-                <span>S4</span>
-              </label>
-            </p>
-            <p>
-              <label for="esm1">
-                <input id="esm1" type="checkbox" />
-                <span>ESM over base. Not radiating</span>
-              </label>
-            </p>
-            <p>
-              <label for="esm2">
-                <input id="esm2" type="checkbox" />
-                <span>ESM over base radiating to carotids</span>
-              </label>
-            </p>
-            <p>
-              <label for="esm3">
-                <input id="esm3" type="checkbox" />
-                <span>ESM over left sternal edge with no relation to Valsalva</span>
-              </label>
-            </p>
-            <p>
-              <label for="esm4">
-                <input id="esm4" type="checkbox" />
-                <span>ESM over left sternal edge that increases with Valsalva</span>
-              </label>
-            </p>
-            <p>
-              <label for="psm1">
-                <input id="psm1" type="checkbox" />
-                <span>PSM, not radiating</span>
-              </label>
-            </p>
-            <p>
-              <label for="psm2">
-                <input id="psm2" type="checkbox" />
-                <span>PSM radiating to the axilla</span>
-              </label>
-            </p>
-            <p>
-              <label for="jvd">
-                <input id="jvd" type="checkbox" />
-                <span>JVD</span>
-              </label>
-            </p>
-            <p>
-              <label for="lls">
-                <input id="lls" type="checkbox" />
-                <span>Lower limb swelling</span>
-              </label>
-            </p>
-            <p>
-              <label for="other-cve">
-                <input id="other-cve" type="checkbox" />
-                <span>
-                  <label for="other-cveText">Other</label>
-                  <input id="other-cveText" type="text" class="validate">
-                </span>
-              </label>
-            </p>
-          </div>
-
-          <div class="row">
-            <p class="groupLabel">Respiratory Exam</p>
-            <p>
-              <label for="worul">
-                <input id="worul" type="checkbox" />
-                <span>Wheezing over RUL</span>
-              </label>
-            </p>
-            <p>
-              <label for="worll">
-                <input id="worll" type="checkbox" />
-                <span>Wheezing over RLL</span>
-              </label>
-            </p>
-            <p>
-              <label for="wolul">
-                <input id="wolul" type="checkbox" />
-                <span>Wheezing over LUL</span>
-              </label>
-            </p>
-            <p>
-              <label for="wolll">
-                <input id="wolll" type="checkbox" />
-                <span>Wheezing over LLL</span>
-              </label>
-            </p>
-            <p>
-              <label for="ccob">
-                <input id="ccob" type="checkbox" />
-                <span>Course Crackles over bases</span>
-              </label>
-            </p>
-            <p>
-              <label for="fcob">
-                <input id="fcob" type="checkbox" />
-                <span>Fine crackles over bases</span>
-              </label>
-            </p>
-            <p>
-              <label for="lce">
-                <input id="lce" type="checkbox" />
-                <span>Limited Chest expansion</span>
-              </label>
-            </p>
-            <p>
-              <label for="lae">
-                <input id="lae" type="checkbox" />
-                <span>Limited air entry</span>
-              </label>
-            </p>
-            <p>
-              <label for="other-re">
-                <input id="other-re" type="checkbox" />
-                <span>
-                  <label for="other-reText">Other</label>
-                  <input id="other-reText" type="text" class="validate">
-                </span>
-              </label>
-            </p>
-          </div>
-
-          <div class="row">
-            <p class="groupLabel">Abdominal Exam</p>
-            <p>
-              <label for="hepatomegally">
-                <input id="hepatomegally" type="checkbox" />
-                <span>Hepatomegally</span>
-              </label>
-            </p>
-            <p>
-              <label for="splenomegally">
-                <input id="splenomegally" type="checkbox" />
-                <span>Splenomegally</span>
-              </label>
-            </p>
-            <p>
-              <label for="shifting-dullness">
-                <input id="shifting-dullness" type="checkbox" />
-                <span>Shifting Dullness</span>
-              </label>
-            </p>
-            <p>
-              <label for="tenderness">
-                <input id="tenderness" type="checkbox" />
-                <span>Tenderness</span>
-              </label>
-            </p>
-            <p>
-              <label for="other-abExam">
-                <input id="other-abExam" type="checkbox" />
-                <span>
-                  <label for="other-abExamText">Other</label>
-                  <input id="other-abExamText" type="text" class="validate">
-                </span>
-              </label>
-            </p>
-          </div>
-
-          <div class="row">
-            <p class="groupLabel">Neuro Exam</p>
-            <p>
-              <label for="ncn">
-                <input id="ncn" type="checkbox" />
-                <span>Normal Cranial nerves</span>
-              </label>
-            </p>
-            <p>
-              <label for="normal-power">
-                <input id="normal-power" type="checkbox" />
-                <span>Normal Power</span>
-              </label>
-            </p>
-            <p>
-              <label for="normal-reflexes">
-                <input id="normal-reflexes" type="checkbox" />
-                <span>Normal Reflexes</span>
-              </label>
-            </p>
-            <p>
-              <label for="normal-coordination">
-                <input id="normal-coordination" type="checkbox" />
-                <span>Normal Coordination</span>
-              </label>
-            </p>
-            <p>
-              <label for="normal-gait">
-                <input id="normal-gait" type="checkbox" />
-                <span>Normal gait</span>
-              </label>
-            </p>
-            <p>
-              <label for="tone">
-                <input id="tone" type="checkbox" />
-                <span>Tone</span>
-              </label>
-            </p>
-            <p>
-              <label for="other-abExam">
-                <input id="other-abExam" type="checkbox" />
-                <span>
-                  <label for="other-abExamText">Other</label>
-                  <input id="other-abExamText" type="text" class="validate">
-                </span>
-              </label>
-            </p>
-          </div>
-
-          <div class="row">
-            <p class="groupLabel">General Exam</p>
-            <p>
-              <label for="noSkinRash">
-                <input id="noSkinRash" type="checkbox" />
-                <span>No skin rash</span>
-              </label>
-            </p>
-            <p>
-              <label for="noPalpLN">
-                <input id="noPalpLN" type="checkbox" />
-                <span>No palpable LN</span>
-              </label>
-            </p>
-            <p>
-              <label for="noClubbing">
-                <input id="noClubbing" type="checkbox" />
-                <span>No Clubbing</span>
-              </label>
-            </p>
-            <p>
-              <label for="noCyanosis">
-                <input id="noCyanosis" type="checkbox" />
-                <span>No Cyanosis</span>
-              </label>
-            </p>
-            <p>
-              <label for="noJointInf">
-                <input id="noJointInf" type="checkbox" />
-                <span>No signs of joint inflammation</span>
-              </label>
-            </p>
-            <p>
-              <label for="other-genExam">
-                <input id="other-genExam" type="checkbox" />
-                <span>
-                  <label for="other-genExamText">Other</label>
-                  <input id="other-genExamText" type="text" class="validate">
-                </span>
-              </label>
-            </p>
-          </div>
-
-          <div class="buttons">
-            <a id="backBtn-physExam" class="waves-effect waves-light btn">Back</a>
-            <a id="nextBtn-physExam" class="waves-effect waves-light btn">Next</a>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="investigations" class="hidden">
-    <div class="container">
-      <h1>Investigations</h1>
-
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s4">
-              <input id="ecg" type="text" class="validate">
-              <label for="ecg">ECG</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s4">
-              <input id="cxr" type="text" class="validate">
-              <label for="cxr">CXR</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s4">
-              <input id="ct" type="text" class="validate">
-              <label for="ct">CT</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s4">
-              <input id="bloodWork" type="text" class="validate">
-              <label for="bloodWork">Blood Work</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s4">
-              <input id="echo" type="text" class="validate">
-              <label for="echo">Echo</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s4">
-              <input id="holter" type="text" class="validate">
-              <label for="holter">Holter</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s4">
-              <input id="stressTest" type="text" class="validate">
-              <label for="stressTest">Stress Test</label>
-            </div>
-          </div>
-
-          <div class="row buttons">
-            <a id="backBtn-inves" class="waves-effect waves-light btn">Back</a>
-            <a id="nextBtn-inves" class="waves-effect waves-light btn">Next</a>
-          </div>
-
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="chest-pain-sec" class="hidden">
+  <section id="chest-pain-sec" class="hide">
     <div class="container">
       <h1>Chest Pain</h1>
 
@@ -1027,7 +620,395 @@
     </div>
   </section>
 
-  <section id="impression-plan" class="hidden">
+  <section id="physical-exam" class="hide">
+    <div class="container">
+      <h1>Physical Exam</h1>
+
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+
+            <div class="input-field col s3">
+              <input id="bloodPressure" type="text" class="validate">
+              <label for="bloodPressure">Blood Pressure</label>
+            </div>
+
+            <div class="input-field col s3">
+              <input id="pulseRate" type="text" class="validate">
+              <label for="pulseRate">Pulse Rate</label>
+            </div>
+
+            <div class="input-field col s3">
+              <input id="oSat" type="text" class="validate">
+              <label for="oSat">Oxygen Saturation</label>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">CV Exam</p>
+            <p>
+              <label for="loudS1">
+                <input id="loudS1" type="checkbox" />
+                <span>Loud S1</span>
+              </label>
+            </p>
+            <p>
+              <label for="loudS2">
+                <input id="loudS2" type="checkbox" />
+                <span>Loud S2</span>
+              </label>
+            </p>
+            <p>
+              <label for="diminishedS1">
+                <input id="diminishedS1" type="checkbox" />
+                <span>Diminished S1</span>
+              </label>
+            </p>
+            <p>
+              <label for="diminishedS2">
+                <input id="diminishedS2" type="checkbox" />
+                <span>Diminished S2</span>
+              </label>
+            </p>
+            <p>
+              <label for="s3">
+                <input id="s3" type="checkbox" />
+                <span>S3</span>
+              </label>
+            </p>
+            <p>
+              <label for="s4">
+                <input id="s4" type="checkbox" />
+                <span>S4</span>
+              </label>
+            </p>
+            <p>
+              <label for="esm1">
+                <input id="esm1" type="checkbox" />
+                <span>ESM over base. Not radiating</span>
+              </label>
+            </p>
+            <p>
+              <label for="esm2">
+                <input id="esm2" type="checkbox" />
+                <span>ESM over base radiating to carotids</span>
+              </label>
+            </p>
+            <p>
+              <label for="esm3">
+                <input id="esm3" type="checkbox" />
+                <span>ESM over left sternal edge with no relation to Valsalva</span>
+              </label>
+            </p>
+            <p>
+              <label for="esm4">
+                <input id="esm4" type="checkbox" />
+                <span>ESM over left sternal edge that increases with Valsalva</span>
+              </label>
+            </p>
+            <p>
+              <label for="psm1">
+                <input id="psm1" type="checkbox" />
+                <span>PSM, not radiating</span>
+              </label>
+            </p>
+            <p>
+              <label for="psm2">
+                <input id="psm2" type="checkbox" />
+                <span>PSM radiating to the axilla</span>
+              </label>
+            </p>
+            <p>
+              <label for="jvd">
+                <input id="jvd" type="checkbox" />
+                <span>JVD</span>
+              </label>
+            </p>
+            <p>
+              <label for="lls">
+                <input id="lls" type="checkbox" />
+                <span>Lower limb swelling</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-cve">
+                <input id="other-cve" type="checkbox" />
+                <span>
+                  <label for="other-cveText">Other</label>
+                  <input id="other-cveText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">Respiratory Exam</p>
+            <p>
+              <label for="worul">
+                <input id="worul" type="checkbox" />
+                <span>Wheezing over RUL</span>
+              </label>
+            </p>
+            <p>
+              <label for="worll">
+                <input id="worll" type="checkbox" />
+                <span>Wheezing over RLL</span>
+              </label>
+            </p>
+            <p>
+              <label for="wolul">
+                <input id="wolul" type="checkbox" />
+                <span>Wheezing over LUL</span>
+              </label>
+            </p>
+            <p>
+              <label for="wolll">
+                <input id="wolll" type="checkbox" />
+                <span>Wheezing over LLL</span>
+              </label>
+            </p>
+            <p>
+              <label for="ccob">
+                <input id="ccob" type="checkbox" />
+                <span>Course Crackles over bases</span>
+              </label>
+            </p>
+            <p>
+              <label for="fcob">
+                <input id="fcob" type="checkbox" />
+                <span>Fine crackles over bases</span>
+              </label>
+            </p>
+            <p>
+              <label for="lce">
+                <input id="lce" type="checkbox" />
+                <span>Limited Chest expansion</span>
+              </label>
+            </p>
+            <p>
+              <label for="lae">
+                <input id="lae" type="checkbox" />
+                <span>Limited air entry</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-re">
+                <input id="other-re" type="checkbox" />
+                <span>
+                  <label for="other-reText">Other</label>
+                  <input id="other-reText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">Abdominal Exam</p>
+            <p>
+              <label for="hepatomegally">
+                <input id="hepatomegally" type="checkbox" />
+                <span>Hepatomegally</span>
+              </label>
+            </p>
+            <p>
+              <label for="splenomegally">
+                <input id="splenomegally" type="checkbox" />
+                <span>Splenomegally</span>
+              </label>
+            </p>
+            <p>
+              <label for="shifting-dullness">
+                <input id="shifting-dullness" type="checkbox" />
+                <span>Shifting Dullness</span>
+              </label>
+            </p>
+            <p>
+              <label for="tenderness">
+                <input id="tenderness" type="checkbox" />
+                <span>Tenderness</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-abExam">
+                <input id="other-abExam" type="checkbox" />
+                <span>
+                  <label for="other-abExamText">Other</label>
+                  <input id="other-abExamText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">Neuro Exam</p>
+            <p>
+              <label for="ncn">
+                <input id="ncn" type="checkbox" />
+                <span>Normal Cranial nerves</span>
+              </label>
+            </p>
+            <p>
+              <label for="normal-power">
+                <input id="normal-power" type="checkbox" />
+                <span>Normal Power</span>
+              </label>
+            </p>
+            <p>
+              <label for="normal-reflexes">
+                <input id="normal-reflexes" type="checkbox" />
+                <span>Normal Reflexes</span>
+              </label>
+            </p>
+            <p>
+              <label for="normal-coordination">
+                <input id="normal-coordination" type="checkbox" />
+                <span>Normal Coordination</span>
+              </label>
+            </p>
+            <p>
+              <label for="normal-gait">
+                <input id="normal-gait" type="checkbox" />
+                <span>Normal gait</span>
+              </label>
+            </p>
+            <p>
+              <label for="tone">
+                <input id="tone" type="checkbox" />
+                <span>Tone</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-abExam">
+                <input id="other-abExam" type="checkbox" />
+                <span>
+                  <label for="other-abExamText">Other</label>
+                  <input id="other-abExamText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="groupLabel">General Exam</p>
+            <p>
+              <label for="noSkinRash">
+                <input id="noSkinRash" type="checkbox" />
+                <span>No skin rash</span>
+              </label>
+            </p>
+            <p>
+              <label for="noPalpLN">
+                <input id="noPalpLN" type="checkbox" />
+                <span>No palpable LN</span>
+              </label>
+            </p>
+            <p>
+              <label for="noClubbing">
+                <input id="noClubbing" type="checkbox" />
+                <span>No Clubbing</span>
+              </label>
+            </p>
+            <p>
+              <label for="noCyanosis">
+                <input id="noCyanosis" type="checkbox" />
+                <span>No Cyanosis</span>
+              </label>
+            </p>
+            <p>
+              <label for="noJointInf">
+                <input id="noJointInf" type="checkbox" />
+                <span>No signs of joint inflammation</span>
+              </label>
+            </p>
+            <p>
+              <label for="other-genExam">
+                <input id="other-genExam" type="checkbox" />
+                <span>
+                  <label for="other-genExamText">Other</label>
+                  <input id="other-genExamText" type="text" class="validate">
+                </span>
+              </label>
+            </p>
+          </div>
+
+          <div class="buttons">
+            <a id="backBtn-physExam" class="waves-effect waves-light btn">Back</a>
+            <a id="nextBtn-physExam" class="waves-effect waves-light btn">Next</a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="investigations" class="hide">
+    <div class="container">
+      <h1>Investigations</h1>
+
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="ecg" type="text" class="validate">
+              <label for="ecg">ECG</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="cxr" type="text" class="validate">
+              <label for="cxr">CXR</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="ct" type="text" class="validate">
+              <label for="ct">CT</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="bloodWork" type="text" class="validate">
+              <label for="bloodWork">Blood Work</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="echo" type="text" class="validate">
+              <label for="echo">Echo</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="holter" type="text" class="validate">
+              <label for="holter">Holter</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="stressTest" type="text" class="validate">
+              <label for="stressTest">Stress Test</label>
+            </div>
+          </div>
+
+          <div class="row buttons">
+            <a id="backBtn-inves" class="waves-effect waves-light btn">Back</a>
+            <a id="nextBtn-inves" class="waves-effect waves-light btn">Next</a>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="impression-plan" class="hide">
     <div class="container">
       <h1>Impression and Plan</h1>
 
