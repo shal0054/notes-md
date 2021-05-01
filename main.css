@@ -1,9 +1,6 @@
 body {
   background-color: antiquewhite;
 }
-.groupLabel{
-  font-size:larger
-}
-.hidden {
-  display:none;
+.groupLabel {
+  font-size: larger;
 }

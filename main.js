@@ -12,25 +12,24 @@ function materializeInit() {
 
 function addListeners() {
   let allSections = document.querySelectorAll('section');
-
+  // let presentedFor = document.getElementById('presented-for');
   let generalSection = document.getElementById('general');
-  let nextBtnGen = document.getElementById('nextBtn-gen');
 
-  let assessmentSection = document.getElementById('assessment');
+  let assessmentSection = document.getElementById('assessment-sec');
   let backBtnAsses = document.getElementById('backBtn-asses');
   let nextBtnAsses = document.getElementById('nextBtn-asses');
 
-  let followUpSection = document.getElementById('follow-up');
+  let followUpSection = document.getElementById('follow-up-sec');
   let backBtnFolUp = document.getElementById('backBtn-folUp');
 
   let physicalExamSection = document.getElementById('physical-exam');
   let nextBtnPhysExam = document.getElementById('nextBtn-physExam');
   let backBtnPhysExam = document.getElementById('backBtn-physExam');
-  
+
   let investigationsSection = document.getElementById('investigations');
   let nextBtnInves = document.getElementById('nextBtn-inves');
   let backBtnInves = document.getElementById('backBtn-inves');
-  
+
   let chestPainSection = document.getElementById('chest-pain-sec');
   let nextBtnChestPain = document.getElementById('nextBtn-chestPain');
   let backBtnChestPain = document.getElementById('backBtn-chestPain');
@@ -39,41 +38,36 @@ function addListeners() {
   let nextBtnImpresPlan = document.getElementById('nextBtn-impressPlan');
   let backBtnImpresPlan = document.getElementById('backBtn-impressPlan');
 
-  if (nextBtnGen) {
-    nextBtnGen.addEventListener('click', () => {
-      let presentedFor = document.getElementById('presented-for').value;
-      switch (presentedFor) {
-        case 'assessment':
-          // hide all sections
-          allSections.forEach((section) => {
-            section.classList.add('hidden');
-          });
-          // show assessment screen
-          assessmentSection.classList.remove('hidden');
-          break;
-        case 'follow-up':
-          // hide all sections
-          allSections.forEach((section) => {
-            section.classList.add('hidden');
-          });
-          // show follow up screen
-          followUpSection.classList.remove('hidden');
+  let regarding = document.getElementById('regarding');
+  let assessmentRadio = document.getElementById('assessment');
+  let followUpRadio = document.getElementById('follow-up');
+  assessmentRadio.addEventListener('click', () => {
+    regarding.classList.remove('hide');
+    followUpSection.classList.add('hide');
+  });
+  followUpRadio.addEventListener('click', () => {
+    followUpSection.classList.remove('hide');
+    regarding.classList.add('hide');
+  });
 
-          break;
-        default:
-        // display warning
-      }
+  // load assessments section
+  let chestPainRadio = document.getElementById('chest-pain-gen');
+  chestPainRadio.addEventListener('click', () => {
+    // hide all sections
+    allSections.forEach((section) => {
+      section.classList.add('hide');
     });
-  }
+    assessmentSection.classList.remove('hide');
+  });
 
   if (backBtnAsses) {
     backBtnAsses.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
 
-      generalSection.classList.remove('hidden');
+      generalSection.classList.remove('hide');
     });
   }
 
@@ -81,10 +75,10 @@ function addListeners() {
     nextBtnAsses.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
 
-      physicalExamSection.classList.remove('hidden');
+      chestPainSection.classList.remove('hide');
     });
   }
 
@@ -92,10 +86,10 @@ function addListeners() {
     backBtnFolUp.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
 
-      generalSection.classList.remove('hidden');
+      generalSection.classList.remove('hide');
     });
   }
 
@@ -103,10 +97,10 @@ function addListeners() {
     backBtnPhysExam.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
 
-      assessmentSection.classList.remove('hidden');
+      chestPainSection.classList.remove('hide');
     });
   }
 
@@ -114,10 +108,10 @@ function addListeners() {
     nextBtnPhysExam.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
       // display section
-      investigationsSection.classList.remove('hidden');
+      investigationsSection.classList.remove('hide');
     });
   }
 
@@ -125,10 +119,10 @@ function addListeners() {
     backBtnInves.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
 
-      physicalExamSection.classList.remove('hidden');
+      physicalExamSection.classList.remove('hide');
     });
   }
 
@@ -136,10 +130,10 @@ function addListeners() {
     nextBtnInves.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
       // display section
-      chestPainSection.classList.remove('hidden');
+      impressPlanSection.classList.remove('hide');
     });
   }
 
@@ -147,10 +141,10 @@ function addListeners() {
     backBtnChestPain.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
 
-      investigationsSection.classList.remove('hidden');
+      assessmentSection.classList.remove('hide');
     });
   }
 
@@ -158,10 +152,10 @@ function addListeners() {
     nextBtnChestPain.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
       // display section
-      impressPlanSection.classList.remove('hidden');
+      physicalExamSection.classList.remove('hide');
     });
   }
 
@@ -169,10 +163,10 @@ function addListeners() {
     backBtnImpresPlan.addEventListener('click', () => {
       // hide all sections
       allSections.forEach((section) => {
-        section.classList.add('hidden');
+        section.classList.add('hide');
       });
 
-      chestPainSection.classList.remove('hidden');
+      investigationsSection.classList.remove('hide');
     });
   }
 }
