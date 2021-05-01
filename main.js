@@ -48,6 +48,7 @@ function addListeners() {
   followUpRadio.addEventListener('click', () => {
     followUpSection.classList.remove('hide');
     regarding.classList.add('hide');
+    generalSection.classList.add('hide');
   });
 
   // load assessments section

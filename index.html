@@ -16,6 +16,15 @@
 
 <body>
   <section id="general">
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a onclick="start()" href="#!" class="breadcrumb">Start</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <h1>General info</h1>
 
@@ -82,6 +91,16 @@
   </section>
 
   <section id="assessment-sec" class="hide">
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a onclick="start()" href="#!" class="breadcrumb">Start</a>
+          <a href="#!" class="breadcrumb">Assessment</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <h1>Assessment</h1>
 
@@ -259,6 +278,16 @@
   </section>
 
   <section id="follow-up-sec" class="hide">
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a onclick="start()" href="#!" class="breadcrumb">Start</a>
+          <a href="#!" class="breadcrumb">Follow up</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <h1>Follow up</h1>
 
@@ -271,6 +300,17 @@
   </section>
 
   <section id="chest-pain-sec" class="hide">
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a onclick="start()" href="#!" class="breadcrumb">Start</a>
+          <a onclick="loadAssessment()" href="#!" class="breadcrumb">Assessment</a>
+          <a href="#!" class="breadcrumb">Chest Pain</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <h1>Chest Pain</h1>
 
@@ -621,6 +661,17 @@
   </section>
 
   <section id="physical-exam" class="hide">
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="#!" class="breadcrumb">Start</a>
+          <a href="#!" class="breadcrumb">Second</a>
+          <a href="#!" class="breadcrumb">Third</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <h1>Physical Exam</h1>
 
@@ -943,6 +994,17 @@
   </section>
 
   <section id="investigations" class="hide">
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="#!" class="breadcrumb">Start</a>
+          <a href="#!" class="breadcrumb">Second</a>
+          <a href="#!" class="breadcrumb">Third</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <h1>Investigations</h1>
 
@@ -1009,6 +1071,17 @@
   </section>
 
   <section id="impression-plan" class="hide">
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="#!" class="breadcrumb">Start</a>
+          <a href="#!" class="breadcrumb">Second</a>
+          <a href="#!" class="breadcrumb">Third</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <h1>Impression and Plan</h1>
 
@@ -1042,6 +1115,29 @@
     </div>
   </section>
 
+  <!-- UI Script Only -->
+  <script>
+    let allSections = document.querySelectorAll('section');
+    function start() {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hide');
+      });
+      // display general section
+      let generalSection = document.getElementById('general');
+      generalSection.classList.remove('hide');
+    }
+    function loadAssessment() {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hide');
+      });
+      // display general section
+      let assessmentSection = document.getElementById('assessment-sec');
+      assessmentSection.classList.remove('hide');
+
+    }
+  </script>
 </body>
 
 </html>
