@@ -1,9 +1,19 @@
-body {
+body, nav {
   background-color: antiquewhite;
+  /* margin-top: 1rem; */
 }
 .groupLabel {
   font-size: larger;
 }
 nav {
   padding-left: 1rem;
+}
+.myCursor {
+  cursor: pointer;
+}
+a {
+  color: #000;
+}
+.breadcrumb:before {
+  color: #000000;
 }
