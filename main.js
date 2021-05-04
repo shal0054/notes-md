@@ -12,7 +12,6 @@ function materializeInit() {
 
 function addListeners() {
   let allSections = document.querySelectorAll('section');
-  // let presentedFor = document.getElementById('presented-for');
   let generalSection = document.getElementById('general');
 
   let assessmentSection = document.getElementById('assessment-sec');
@@ -65,7 +64,6 @@ function addListeners() {
     nextBtnGen.addEventListener('click', () => {
       console.log(otherText.value);
     });
-
   });
   /*****************************************************************/
 
@@ -199,3 +197,78 @@ function addListeners() {
     });
   }
 }
+
+/******* Capture all input elements *********/
+/****** Gen info *******/
+let salutation = document.getElementById('salutation');
+let name = document.getElementById('name');
+let age = document.getElementById('age');
+
+// presented for
+let assessment = document.getElementById('assessment');
+let followUp = document.getElementById('follow-up');
+
+//regarding
+let chestPain = document.getElementById('chest-pain-gen');
+let otherRegarding = document.getElementById('other-regarding');
+
+/************  Assessment *********/
+// Cardiovascular risk
+let smoking = document.getElementById('smoking');
+let dyslipidemia = document.getElementById('dyslipidemia');
+let diabetes = document.getElementById('diabetes');
+let hypertension = document.getElementById('hypertension');
+let cad = document.getElementById('cad');
+
+// Other past medical history
+let hypothyroidism = document.getElementById('hypothyroidism');
+let dyslipidemia2 = document.getElementById('dyslipidemia2');
+let heartFailure = document.getElementById('heart-failure');
+let cva = document.getElementById('cva');
+let pe = document.getElementById('pe');
+let bronchialAsthma = document.getElementById('bronchial-asthma');
+let osteoarthritis = document.getElementById('osteoarthritis');
+let tia = document.getElementById('tia');
+let dvt = document.getElementById('dvt');
+let copd = document.getElementById('copd');
+let otherOpmh = document.getElementById('other-text');
+
+// Social history
+let cpSmoking = document.getElementById('cp-smoking');
+let alcohol = document.getElementById('alcohol');
+let marijuana = document.getElementById('marijuana');
+let drugs = document.getElementById('drugs');
+let exertionalDizziness = document.getElementById('exertional-dizziness');
+let partner = document.getElementById('partner');
+let medCoverage = document.getElementById('medCoverage');
+let job = document.getElementById('job');
+
+/************  Chest pain *********/
+// when
+let whenPain = document.getElementById('whenPain');
+
+// What did the pain feel like
+let sharp = document.getElementById('sharp');
+let dull = document.getElementById('dull');
+let squeezing = document.getElementById('squeezing');
+let heaviness = document.getElementById('heaviness');
+let stabbing = document.getElementById('stabbing');
+let constricting = document.getElementById('constricting');
+let otherPain = document.getElementById('other-pain');
+
+// How long did the pain last
+let stillThere = document.getElementById('stillThere');
+let waxWan = document.getElementById('waxWan');
+let fewMin = document.getElementById('fewMin');
+let fewHours = document.getElementById('fewHours');
+let otherPainTime = document.getElementById('other-painTime');
+
+// How often does the pain occur
+let stillThereCheckbox = document.getElementById('stillThere-checkbox');
+let once = document.getElementById('once');
+let twice = document.getElementById('twice');
+let threeTimes = document.getElementById('threeTimes');
+let everyFewMin = document.getElementById('everyFewMin');
+let everyFewHours = document.getElementById('everyFewHours');
+let everyFewDays = document.getElementById('everyFewDays');
+let everyFewWeeks = document.getElementById('everyFewWeeks');
