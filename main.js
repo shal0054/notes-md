@@ -51,6 +51,24 @@ function addListeners() {
     generalSection.classList.add('hide');
   });
 
+  /************************ Handling Other *************************/
+  let other = document.getElementById('other-regarding');
+  other.addEventListener('change', () => {
+    let otherText = document.getElementById('other-text');
+    otherText.classList.remove('hide');
+
+    let otherSpan = document.getElementById('other-regarding-span');
+    otherSpan.classList.add('hide');
+
+    let nextBtnGen = document.getElementById('nextBtn-gen');
+    nextBtnGen.classList.remove('hide');
+    nextBtnGen.addEventListener('click', () => {
+      console.log(otherText.value);
+    });
+
+  });
+  /*****************************************************************/
+
   // load assessments section
   let chestPainRadio = document.getElementById('chest-pain-gen');
   chestPainRadio.addEventListener('click', () => {
