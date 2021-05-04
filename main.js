@@ -87,6 +87,7 @@ function addListeners() {
       });
 
       generalSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -98,6 +99,7 @@ function addListeners() {
       });
 
       chestPainSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -109,6 +111,7 @@ function addListeners() {
       });
 
       generalSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -120,6 +123,7 @@ function addListeners() {
       });
 
       chestPainSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -131,6 +135,7 @@ function addListeners() {
       });
       // display section
       investigationsSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -142,6 +147,7 @@ function addListeners() {
       });
 
       physicalExamSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -153,6 +159,7 @@ function addListeners() {
       });
       // display section
       impressPlanSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -164,6 +171,7 @@ function addListeners() {
       });
 
       assessmentSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -175,6 +183,7 @@ function addListeners() {
       });
       // display section
       physicalExamSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 
@@ -186,6 +195,7 @@ function addListeners() {
       });
 
       investigationsSection.classList.remove('hide');
+      scrollTo(0, 0);
     });
   }
 }
