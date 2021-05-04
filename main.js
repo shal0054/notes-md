@@ -243,7 +243,7 @@ let partner = document.getElementById('partner');
 let medCoverage = document.getElementById('medCoverage');
 let job = document.getElementById('job');
 
-/************  Chest pain *********/
+/************ Chest pain *********/
 // when
 let whenPain = document.getElementById('whenPain');
 
@@ -272,3 +272,47 @@ let everyFewMin = document.getElementById('everyFewMin');
 let everyFewHours = document.getElementById('everyFewHours');
 let everyFewDays = document.getElementById('everyFewDays');
 let everyFewWeeks = document.getElementById('everyFewWeeks');
+let everyFewMonths = document.getElementById('everyFewMonths');
+let otherPainOften = document.getElementById('other-painOften');
+
+// Exertion
+let exertion = document.getElementById('exertion');
+let position = document.getElementById('position');
+let respiration = document.getElementById('respiration');
+let meals = document.getElementById('meals');
+let swallowing = document.getElementById('swallowing');
+let palpation = document.getElementById('palpation');
+let armMovement = document.getElementById('arm-movement');
+let otherExertion = document.getElementById('other-exertion');
+
+// If the pain is related to something, explain here
+let explainPain = document.getElementById('explainPain');
+
+// What makes the pain worse
+let painWorse = document.getElementById('painWorse');
+
+//What makes it better
+let painBetter = document.getElementById('painBetter');
+
+// The pain is accompanied by
+let shortBreath = document.getElementById('shortBreath');
+let palpitation = document.getElementById('palpitation');
+let dizziness = document.getElementById('dizziness');
+let nausea = document.getElementById('nausea');
+let vomiting = document.getElementById('vomiting');
+let none = document.getElementById('none');
+let otherPainAccomp = document.getElementById('other-painAccomp');
+
+// Symptoms of heart failure
+let dyspnea = document.getElementById('dyspnea');
+let orthopnea = document.getElementById('orthopnea');
+let pnd = document.getElementById('pnd');
+let cp_lls = document.getElementById('cp-lls');
+let exertionalDizziness = document.getElementById('exertional-dizziness');
+let syncope = document.getElementById('syncope');
+
+// Medication
+let medication = document.getElementById('medication');
+
+/************ Physical Exam *********/
+// 
