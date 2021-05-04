@@ -671,9 +671,10 @@
     <nav class="z-depth-0">
       <div class="nav-wrapper container">
         <div class="col s12">
-          <a class="breadcrumb black-text myCursor">Start</a>
-          <a class="breadcrumb black-text myCursor">Second</a>
-          <a class="breadcrumb black-text">Third</a>
+          <a onclick="start()" class="breadcrumb black-text myCursor">Start</a>
+          <a onclick="loadAssessment()" class="breadcrumb black-text myCursor">Assessment</a>
+          <a onclick="loadChestPain()" class="breadcrumb black-text myCursor">Chest Pain</a>
+          <a class="breadcrumb black-text">Physical Exam</a>
         </div>
       </div>
     </nav>
@@ -1004,9 +1005,11 @@
     <nav class="z-depth-0">
       <div class="nav-wrapper container">
         <div class="col s12">
-          <a class="breadcrumb black-text myCursor">Start</a>
-          <a class="breadcrumb black-text myCursor">Second</a>
-          <a class="breadcrumb black-text">Third</a>
+          <a onclick="start()" class="breadcrumb black-text myCursor">Start</a>
+          <a onclick="loadAssessment()" class="breadcrumb black-text myCursor">Assessment</a>
+          <a onclick="loadChestPain()" class="breadcrumb black-text myCursor">Chest Pain</a>
+          <a onclick="loadPhysExam()" class="breadcrumb black-text myCursor">Physical Exam</a>
+          <a class="breadcrumb black-text">Investigations</a>
         </div>
       </div>
     </nav>
@@ -1081,9 +1084,12 @@
     <nav class="z-depth-0">
       <div class="nav-wrapper container">
         <div class="col s12">
-          <a class="breadcrumb black-text myCursor">Start</a>
-          <a class="breadcrumb black-text myCursor">Second</a>
-          <a class="breadcrumb black-text">Third</a>
+          <a onclick="start()" class="breadcrumb black-text myCursor">Start</a>
+          <a onclick="loadAssessment()" class="breadcrumb black-text myCursor">Assessment</a>
+          <a onclick="loadChestPain()" class="breadcrumb black-text myCursor">Chest Pain</a>
+          <a onclick="loadPhysExam()" class="breadcrumb black-text myCursor">Physical Exam</a>
+          <a onclick="loadInves()" class="breadcrumb black-text myCursor">Investigations</a>
+          <a class="breadcrumb black-text">Impression & Plan</a>
         </div>
       </div>
     </nav>
@@ -1141,7 +1147,33 @@
       // display general section
       let assessmentSection = document.getElementById('assessment-sec');
       assessmentSection.classList.remove('hide');
-
+    }
+    function loadChestPain() {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hide');
+      });
+      // display chest pain section
+      let chestPainSection = document.getElementById('chest-pain-sec');
+      chestPainSection.classList.remove('hide');
+    }
+    function loadPhysExam() {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hide');
+      });
+      // display physical exam section
+      let physicalExamSection = document.getElementById('physical-exam');
+      physicalExamSection.classList.remove('hide');
+    }
+    function loadInves() {
+      // hide all sections
+      allSections.forEach((section) => {
+        section.classList.add('hide');
+      });
+      // display impress-plan section
+      let investigationsSection = document.getElementById('investigations');
+      investigationsSection.classList.remove('hide');
     }
   </script>
 </body>
