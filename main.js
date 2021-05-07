@@ -34,7 +34,6 @@ function addListeners() {
   let backBtnChestPain = document.getElementById('backBtn-chestPain');
 
   let impressPlanSection = document.getElementById('impression-plan');
-  let nextBtnImpresPlan = document.getElementById('nextBtn-impressPlan');
   let backBtnImpresPlan = document.getElementById('backBtn-impressPlan');
 
   let regarding = document.getElementById('regarding');
@@ -196,6 +195,8 @@ function addListeners() {
       scrollTo(0, 0);
     });
   }
+
+  // Generate Report
 }
 
 /******* Capture all input elements *********/
@@ -308,11 +309,99 @@ let dyspnea = document.getElementById('dyspnea');
 let orthopnea = document.getElementById('orthopnea');
 let pnd = document.getElementById('pnd');
 let cp_lls = document.getElementById('cp-lls');
-let exertionalDizziness = document.getElementById('exertional-dizziness');
+let exertionalDizziness2 = document.getElementById('exertional-dizziness2');
 let syncope = document.getElementById('syncope');
 
 // Medication
 let medication = document.getElementById('medication');
 
 /************ Physical Exam *********/
-// 
+// Blood Pressure
+let bloodPressure = document.getElementById('bloodPressure');
+
+// Pulse Rate
+let pulseRate = document.getElementById('pulseRate');
+
+// Oxygen Saturation
+let oSat = document.getElementById('oSat');
+
+// CV Exam
+let loudS1 = document.getElementById('loudS1');
+let loudS2 = document.getElementById('loudS2');
+let diminishedS1 = document.getElementById('diminishedS1');
+let diminishedS2 = document.getElementById('diminishedS2');
+let s3 = document.getElementById('s3');
+let s4 = document.getElementById('s4');
+let esm1 = document.getElementById('esm1');
+let esm2 = document.getElementById('esm2');
+let esm3 = document.getElementById('esm3');
+let esm4 = document.getElementById('esm4');
+let psm1 = document.getElementById('psm1');
+let psm2 = document.getElementById('psm2');
+let jvd = document.getElementById('jvd');
+let lls = document.getElementById('lls');
+let otherCve = document.getElementById('other-cve');
+
+// Respiratory Exam
+let worul = document.getElementById('worul');
+let worll = document.getElementById('worll');
+let wolul = document.getElementById('wolul');
+let wolll = document.getElementById('wolll');
+let ccob = document.getElementById('ccob');
+let fcob = document.getElementById('fcob');
+let lce = document.getElementById('lce');
+let lae = document.getElementById('lae');
+let otherRe = document.getElementById('other-re');
+
+// Abdominal Exam
+let hepatomegally = document.getElementById('hepatomegally');
+let splenomegally = document.getElementById('splenomegally');
+let shiftingDullness = document.getElementById('shifting-dullness');
+let tenderness = document.getElementById('tenderness');
+let otherAbExam = document.getElementById('other-abExam');
+
+// Neuro Exam
+let ncn = document.getElementById('ncn');
+let normalPower = document.getElementById('normal-power');
+let normalReflexes = document.getElementById('normal-reflexes');
+let normalCoordination = document.getElementById('normal-coordination');
+let normalGait = document.getElementById('normal-gait');
+let tone = document.getElementById('tone');
+let otherAbExam2 = document.getElementById('other-abExam2');
+
+// General Exam
+let noSkinRash = document.getElementById('noSkinRash');
+let noPalpLN = document.getElementById('noPalpLN');
+let noClubbing = document.getElementById('noClubbing');
+let noCyanosis = document.getElementById('noCyanosis');
+let noJointInf = document.getElementById('noJointInf');
+let otherGenExam = document.getElementById('other-genExam');
+
+/************ Investigations *********/
+// ECG
+let ecg = document.getElementById('ecg');
+
+// CXR
+let cxr = document.getElementById('cxr');
+
+// CT
+let ct = document.getElementById('ct');
+
+// Blood Work
+let bloodWork = document.getElementById('bloodWork');
+
+// Echo
+let echo = document.getElementById('echo');
+
+// Holter
+let holter = document.getElementById('holter');
+
+// Stress Test
+let stressTest = document.getElementById('stressTest');
+
+/************ Impression and Plan *********/
+// Impression
+let impression = document.getElementById('impression');
+
+// Plan
+let plan = document.getElementById('plan');
