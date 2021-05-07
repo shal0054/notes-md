@@ -5,8 +5,8 @@ body, nav {
 .groupLabel {
   font-size: larger;
 }
-nav {
-  padding-left: 1rem;
+h1 {
+  padding-top: 1.3rem;
 }
 .myCursor {
   cursor: pointer;
