@@ -197,11 +197,25 @@ function addListeners() {
   }
 
   // Generate Report
+  let genReportBtn = document.getElementById('genReportBtn');
+  if (genReportBtn) genReportBtn.addEventListener('click', genReport);
 }
+function genReport() {
+  let report = document.getElementById('report');
+  let df = document.createDocumentFragment();
+
+  if (salutation.value) {
+
+  }
+
+}
+
+let inputs = [];
 
 /******* Capture all input elements *********/
 /****** Gen info *******/
 let salutation = document.getElementById('salutation');
+inputs.push(salutation);
 let name = document.getElementById('name');
 let age = document.getElementById('age');
 
