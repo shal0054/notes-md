@@ -50,20 +50,25 @@ function addListeners() {
   });
 
   /************************ Handling Other *************************/
-  let other = document.getElementById('other-regarding');
-  other.addEventListener('change', () => {
-    let otherText = document.getElementById('other-regarding-text');
-    otherText.classList.remove('hide');
+  let otherRegarding = document.getElementById('other-regarding');
+  otherRegarding.addEventListener('change', () => {
+    let otherRegText = otherRegarding.nextElementSibling.children[1];
+    otherRegText.classList.remove('hide');
 
-    let otherSpan = document.getElementById('other-regarding-span');
+    let otherSpan = otherRegText.previousElementSibling;
     otherSpan.classList.add('hide');
 
     let nextBtnGen = document.getElementById('nextBtn-gen');
     nextBtnGen.classList.remove('hide');
     nextBtnGen.addEventListener('click', () => {
-      console.log(otherText.value);
+      console.log(otherRegText.value);
     });
   });
+
+  ////////////////////////////////
+  document.getElementById('other').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-pain').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-painTime').addEventListener('change', revealOtherTextField);
   /*****************************************************************/
 
   // load assessments section
@@ -200,14 +205,21 @@ function addListeners() {
   let genReportBtn = document.getElementById('genReportBtn');
   if (genReportBtn) genReportBtn.addEventListener('click', genReport);
 }
+
+function revealOtherTextField(ev) {
+  let otherTextField = ev.target.nextElementSibling.children[1];
+  otherTextField.classList.toggle('hide');
+
+  let otherSpan = otherTextField.previousElementSibling;
+  otherSpan.classList.toggle('hide');
+}
+
 function genReport() {
   let report = document.getElementById('report');
   let df = document.createDocumentFragment();
 
   if (salutation.value) {
-
   }
-
 }
 
 let inputs = [];
