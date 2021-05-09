@@ -52,7 +52,7 @@ function addListeners() {
   /************************ Handling Other *************************/
   let other = document.getElementById('other-regarding');
   other.addEventListener('change', () => {
-    let otherText = document.getElementById('other-text');
+    let otherText = document.getElementById('other-regarding-text');
     otherText.classList.remove('hide');
 
     let otherSpan = document.getElementById('other-regarding-span');
