@@ -5,6 +5,13 @@ body, nav {
 .groupLabel {
   font-size: larger;
 }
+.report{
+  font-size: 18px;
+}
+nav {
+  margin-bottom: 6rem;
+
+}
 h1 {
   padding-top: 1.3rem;
 }

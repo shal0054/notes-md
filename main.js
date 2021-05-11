@@ -10,8 +10,14 @@ function materializeInit() {
   var instances = M.FormSelect.init(elems);
 }
 
-function addListeners() {
+function hideAllSections() {
   let allSections = document.querySelectorAll('section');
+  allSections.forEach((section) => {
+    section.classList.add('hide');
+  });
+}
+
+function addListeners() {
   let generalSection = document.getElementById('general');
 
   let assessmentSection = document.getElementById('assessment-sec');
@@ -39,62 +45,92 @@ function addListeners() {
   let regarding = document.getElementById('regarding');
   let assessmentRadio = document.getElementById('assessment');
   let followUpRadio = document.getElementById('follow-up');
-  assessmentRadio.addEventListener('click', () => {
-    regarding.classList.remove('hide');
-    followUpSection.classList.add('hide');
-  });
-  followUpRadio.addEventListener('click', () => {
-    followUpSection.classList.remove('hide');
-    regarding.classList.add('hide');
-    generalSection.classList.add('hide');
-  });
-
-  /************************ Handling Other *************************/
-  let otherRegarding = document.getElementById('other-regarding');
-  otherRegarding.addEventListener('change', () => {
-    let otherRegText = otherRegarding.nextElementSibling.children[1];
-    otherRegText.classList.remove('hide');
-
-    let otherSpan = otherRegText.previousElementSibling;
-    otherSpan.classList.add('hide');
-
-    let nextBtnGen = document.getElementById('nextBtn-gen');
-    nextBtnGen.classList.remove('hide');
-    nextBtnGen.addEventListener('click', () => {
-      console.log(otherRegText.value);
+  if (assessmentRadio) {
+    assessmentRadio.addEventListener('click', () => {
+      regarding.classList.remove('hide');
+      followUpSection.classList.add('hide');
     });
-  });
+  }
+  if (followUpRadio) {
+    followUpRadio.addEventListener('click', () => {
+      followUpSection.classList.remove('hide');
+      regarding.classList.add('hide');
+      generalSection.classList.add('hide');
+    });
+  }
 
-  ////////////////////////////////
-  document.getElementById('other').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-pain').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-painTime').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-painOften').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-exertion').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-painAccomp').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-cve').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-re').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-abExam').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-abExam2').addEventListener('change', revealOtherTextField);
-  document.getElementById('other-genExam').addEventListener('change', revealOtherTextField);
-  /*****************************************************************/
+  /************************ Handling Other ****************************/
+  // this other field loads a next button
+  let otherRegarding = document.getElementById('other-regarding');
+  if (otherRegarding) {
+    otherRegarding.addEventListener('change', () => {
+      let otherRegText = otherRegarding.nextElementSibling.children[1];
+      otherRegText.classList.remove('hide');
+
+      let otherSpan = otherRegText.previousElementSibling;
+      otherSpan.classList.add('hide');
+
+      let nextBtnGen = document.getElementById('nextBtn-gen');
+      nextBtnGen.classList.remove('hide');
+      nextBtnGen.addEventListener('click', () => {
+        console.log(otherRegText.value);
+      });
+    });
+  }
+
+  // other fields
+  let other = document.getElementById('other');
+  if (other) other.addEventListener('change', revealOtherTextField);
+
+  let otherPain = document.getElementById('other-pain');
+  if (otherPain) otherPain.addEventListener('change', revealOtherTextField);
+
+  let otherPainTime = document.getElementById('other-painTime');
+  if (otherPainTime) other.addEventListener('change', revealOtherTextField);
+
+  let otherPainOften = document.getElementById('other-painOften');
+  if (otherPainOften)
+    otherPainOften.addEventListener('change', revealOtherTextField);
+
+  let otherExertion = document.getElementById('other-exertion');
+  if (otherExertion)
+    otherExertion.addEventListener('change', revealOtherTextField);
+
+  let otherPainAccomp = document.getElementById('other-painAccomp');
+  if (otherPainAccomp)
+    otherPainAccomp.addEventListener('change', revealOtherTextField);
+
+  let otherCve = document.getElementById('other-cve');
+  if (otherCve) otherCve.addEventListener('change', revealOtherTextField);
+
+  let otherRe = document.getElementById('other-re');
+  if (otherRe) otherRe.addEventListener('change', revealOtherTextField);
+
+  let otherAbExam = document.getElementById('other-abExam');
+  if (otherAbExam) otherAbExam.addEventListener('change', revealOtherTextField);
+
+  let otherAbExam2 = document.getElementById('other-abExam2');
+  if (otherAbExam2)
+    otherAbExam2.addEventListener('change', revealOtherTextField);
+
+  let otherGenExam = document.getElementById('other-genExam');
+  if (otherGenExam)
+    otherGenExam.addEventListener('change', revealOtherTextField);
+  /********************************************************************/
 
   // load assessments section
   let chestPainRadio = document.getElementById('chest-pain-gen');
-  chestPainRadio.addEventListener('click', () => {
-    // hide all sections
-    allSections.forEach((section) => {
-      section.classList.add('hide');
+  if (chestPainRadio) {
+    chestPainRadio.addEventListener('click', () => {
+      hideAllSections();
+      assessmentSection.classList.remove('hide');
     });
-    assessmentSection.classList.remove('hide');
-  });
+  }
 
+  // button listeners
   if (backBtnAsses) {
     backBtnAsses.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
 
       generalSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -103,10 +139,7 @@ function addListeners() {
 
   if (nextBtnAsses) {
     nextBtnAsses.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
 
       chestPainSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -115,10 +148,7 @@ function addListeners() {
 
   if (backBtnFolUp) {
     backBtnFolUp.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
 
       generalSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -127,10 +157,7 @@ function addListeners() {
 
   if (backBtnPhysExam) {
     backBtnPhysExam.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
 
       chestPainSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -139,10 +166,8 @@ function addListeners() {
 
   if (nextBtnPhysExam) {
     nextBtnPhysExam.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
+
       // display section
       investigationsSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -151,10 +176,7 @@ function addListeners() {
 
   if (backBtnInves) {
     backBtnInves.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
 
       physicalExamSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -163,10 +185,8 @@ function addListeners() {
 
   if (nextBtnInves) {
     nextBtnInves.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
+
       // display section
       impressPlanSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -175,10 +195,7 @@ function addListeners() {
 
   if (backBtnChestPain) {
     backBtnChestPain.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
 
       assessmentSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -187,10 +204,8 @@ function addListeners() {
 
   if (nextBtnChestPain) {
     nextBtnChestPain.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
+
       // display section
       physicalExamSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -199,10 +214,7 @@ function addListeners() {
 
   if (backBtnImpresPlan) {
     backBtnImpresPlan.addEventListener('click', () => {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
 
       investigationsSection.classList.remove('hide');
       scrollTo(0, 0);
@@ -222,20 +234,44 @@ function revealOtherTextField(ev) {
   otherSpan.classList.toggle('hide');
 }
 
-function genReport() {
+function genReport(ev) {
+  hideAllSections();
+  // Generate Report modal here
+
+  let reportSection = document.getElementById('reportSection');
   let report = document.getElementById('report');
+  report.innerHTML = '';
   let df = document.createDocumentFragment();
 
   if (salutation.value) {
+    let salutationP = document.createElement('p');
+    salutationP.classList.add('report');
+    salutationP.innerHTML = salutation.value;
+    df.append(salutationP);
   }
-}
 
-let inputs = [];
+  if (name.value) {
+    let nameP = document.createElement('p');
+    nameP.classList.add('report');
+    nameP.innerHTML = name.value;
+    df.append(nameP);
+  }
+
+  if (age.value) {
+    let ageP = document.createElement('p');
+    ageP.classList.add('report');
+    ageP.innerHTML = age.value;
+    df.append(ageP);
+  }
+
+  report.append(df);
+  reportSection.classList.remove('hide');
+  scrollTo(0, 0);
+}
 
 /******* Capture all input elements *********/
 /****** Gen info *******/
 let salutation = document.getElementById('salutation');
-inputs.push(salutation);
 let name = document.getElementById('name');
 let age = document.getElementById('age');
 
