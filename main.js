@@ -69,6 +69,14 @@ function addListeners() {
   document.getElementById('other').addEventListener('change', revealOtherTextField);
   document.getElementById('other-pain').addEventListener('change', revealOtherTextField);
   document.getElementById('other-painTime').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-painOften').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-exertion').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-painAccomp').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-cve').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-re').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-abExam').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-abExam2').addEventListener('change', revealOtherTextField);
+  document.getElementById('other-genExam').addEventListener('change', revealOtherTextField);
   /*****************************************************************/
 
   // load assessments section
