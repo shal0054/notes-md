@@ -73,7 +73,9 @@ function addListeners() {
       let nextBtnGen = document.getElementById('nextBtn-gen');
       nextBtnGen.classList.remove('hide');
       nextBtnGen.addEventListener('click', () => {
-        console.log(otherRegText.value);
+        // console.log(otherRegText.value);
+        // this is temporary
+        genReport();
       });
     });
   }
@@ -243,13 +245,14 @@ function genReport(ev) {
   report.innerHTML = '';
   let df = document.createDocumentFragment();
 
-  if (salutation.value) {
-    let salutationP = document.createElement('p');
-    salutationP.classList.add('report');
-    salutationP.innerHTML = salutation.value;
-    df.append(salutationP);
+  /******* Capture all input elements *********/
+  /****** Gen info *******/
+  let salutation = document.getElementById('salutation');
+  if (salutation) {
+    df.append(addToReport(salutation));
   }
 
+  let name = document.getElementById('name');
   if (name.value) {
     let nameP = document.createElement('p');
     nameP.classList.add('report');
@@ -257,6 +260,7 @@ function genReport(ev) {
     df.append(nameP);
   }
 
+  let age = document.getElementById('age');
   if (age.value) {
     let ageP = document.createElement('p');
     ageP.classList.add('report');
@@ -264,30 +268,79 @@ function genReport(ev) {
     df.append(ageP);
   }
 
+  // presented for
+  let assessment = document.getElementById('assessment');
+  if (assessment.checked) {
+    let assessmentP = document.createElement('p');
+    assessmentP.classList.add('report');
+    assessmentP.innerHTML = assessment.value;
+    df.append(assessmentP);
+  }
+
+  let followUp = document.getElementById('follow-up');
+  if (followUp.checked) {
+    let followUpP = document.createElement('p');
+    followUpP.classList.add('report');
+    followUpP.innerHTML = followUp.value;
+    df.append(followUpP);
+  }
+
+  //regarding
+  let chestPain = document.getElementById('chest-pain-gen');
+  if (chestPain.checked) {
+    let chestPainP = document.createElement('p');
+    chestPainP.classList.add('report');
+    chestPainP.innerHTML = chestPain.value;
+    df.append(chestPainP);
+  }
+
+  let otherRegarding = document.getElementById('other-regarding');
+  if (otherRegarding.checked) {
+    let otherRegardingP = document.createElement('p');
+    otherRegardingP.classList.add('report');
+    otherRegardingP.innerHTML =
+      otherRegarding.nextElementSibling.children[1].value;
+    df.append(otherRegardingP);
+  }
+
+  /************  Assessment *********/
+  // Cardiovascular risk
+  let smoking = document.getElementById('smoking');
+  if (smoking.checked) {
+    let smokingP = document.createElement('p');
+    smokingP.classList.add('report');
+    smokingP.innerHTML = smoking.value;
+    df.append(smokingP);
+  }
+
+  let dyslipidemia = document.getElementById('dyslipidemia');
+  if (dyslipidemia.checked) {
+    let dyslipidemiaP = document.createElement('p');
+    dyslipidemiaP.classList.add('report');
+    dyslipidemiaP.innerHTML = dyslipidemia.value;
+    df.append(dyslipidemiaP);
+  }
+
+  let diabetes = document.getElementById('diabetes');
+  if (diabetes.checked) {
+    let diabetesP = document.createElement('p');
+    diabetesP.classList.add('report');
+    diabetesP.innerHTML = diabetes.value;
+    df.append(diabetesP);
+  }
+
   report.append(df);
   reportSection.classList.remove('hide');
   scrollTo(0, 0);
 }
 
-/******* Capture all input elements *********/
-/****** Gen info *******/
-let salutation = document.getElementById('salutation');
-let name = document.getElementById('name');
-let age = document.getElementById('age');
+function addToReport(item) {
+  let itemP = document.createElement('p');
+  itemP.classList.add('report');
+  itemP.innerHTML = item.value;
+  return itemP;
+}
 
-// presented for
-let assessment = document.getElementById('assessment');
-let followUp = document.getElementById('follow-up');
-
-//regarding
-let chestPain = document.getElementById('chest-pain-gen');
-let otherRegarding = document.getElementById('other-regarding');
-
-/************  Assessment *********/
-// Cardiovascular risk
-let smoking = document.getElementById('smoking');
-let dyslipidemia = document.getElementById('dyslipidemia');
-let diabetes = document.getElementById('diabetes');
 let hypertension = document.getElementById('hypertension');
 let cad = document.getElementById('cad');
 
