@@ -254,84 +254,128 @@ function genReport(ev) {
 
   let name = document.getElementById('name');
   if (name.value) {
-    let nameP = document.createElement('p');
-    nameP.classList.add('report');
-    nameP.innerHTML = name.value;
-    df.append(nameP);
+    df.append(addToReport(name));
   }
 
   let age = document.getElementById('age');
   if (age.value) {
-    let ageP = document.createElement('p');
-    ageP.classList.add('report');
-    ageP.innerHTML = age.value;
-    df.append(ageP);
+    df.append(addToReport(age));
   }
 
   // presented for
   let assessment = document.getElementById('assessment');
   if (assessment.checked) {
-    let assessmentP = document.createElement('p');
-    assessmentP.classList.add('report');
-    assessmentP.innerHTML = assessment.value;
-    df.append(assessmentP);
+    df.append(addToReport(assessment));
   }
 
   let followUp = document.getElementById('follow-up');
   if (followUp.checked) {
-    let followUpP = document.createElement('p');
-    followUpP.classList.add('report');
-    followUpP.innerHTML = followUp.value;
-    df.append(followUpP);
+    df.append(addToReport(followUp));
   }
 
   //regarding
   let chestPain = document.getElementById('chest-pain-gen');
   if (chestPain.checked) {
-    let chestPainP = document.createElement('p');
-    chestPainP.classList.add('report');
-    chestPainP.innerHTML = chestPain.value;
-    df.append(chestPainP);
+    df.append(addToReport(chestPain));
   }
 
   let otherRegarding = document.getElementById('other-regarding');
   if (otherRegarding.checked) {
-    let otherRegardingP = document.createElement('p');
-    otherRegardingP.classList.add('report');
-    otherRegardingP.innerHTML =
-      otherRegarding.nextElementSibling.children[1].value;
-    df.append(otherRegardingP);
+    df.append(getOtherText(otherRegarding));
   }
 
   /************  Assessment *********/
   // Cardiovascular risk
   let smoking = document.getElementById('smoking');
   if (smoking.checked) {
-    let smokingP = document.createElement('p');
-    smokingP.classList.add('report');
-    smokingP.innerHTML = smoking.value;
-    df.append(smokingP);
+    df.append(addToReport(smoking));
   }
 
   let dyslipidemia = document.getElementById('dyslipidemia');
   if (dyslipidemia.checked) {
-    let dyslipidemiaP = document.createElement('p');
-    dyslipidemiaP.classList.add('report');
-    dyslipidemiaP.innerHTML = dyslipidemia.value;
-    df.append(dyslipidemiaP);
+    df.append(addToReport(dyslipidemia));
   }
 
   let diabetes = document.getElementById('diabetes');
   if (diabetes.checked) {
-    let diabetesP = document.createElement('p');
-    diabetesP.classList.add('report');
-    diabetesP.innerHTML = diabetes.value;
-    df.append(diabetesP);
+    df.append(addToReport(diabetes));
+  }
+
+  let hypertension = document.getElementById('hypertension');
+  if (hypertension.checked) {
+    df.append(addToReport(hypertension));
+  }
+
+  let cad = document.getElementById('cad');
+  if (cad.checked) {
+    df.append(addToReport(cad));
+  }
+
+  // Other past medical history
+  let hypothyroidism = document.getElementById('hypothyroidism');
+  if (hypothyroidism.checked) {
+    df.append(addToReport(hypothyroidism));
+  }
+
+  let dyslipidemia2 = document.getElementById('dyslipidemia2');
+  if (dyslipidemia2.checked) {
+    df.append(addToReport(dyslipidemia2));
+  }
+
+  let heartFailure = document.getElementById('heart-failure');
+  if (heartFailure.checked) {
+    df.append(addToReport(heartFailure));
+  }
+
+  let cva = document.getElementById('cva');
+  if (cva.checked) {
+    df.append(addToReport(cva));
+  }
+
+  let pe = document.getElementById('pe');
+  if (pe.checked) {
+    df.append(addToReport(pe));
+  }
+
+  let bronchialAsthma = document.getElementById('bronchial-asthma');
+  if (bronchialAsthma.checked) {
+    df.append(addToReport(bronchialAsthma));
+  }
+
+  let osteoarthritis = document.getElementById('osteoarthritis');
+  if (osteoarthritis.checked) {
+    df.append(addToReport(osteoarthritis));
+  }
+
+  let tia = document.getElementById('tia');
+  if (tia.checked) {
+    df.append(addToReport(tia));
+  }
+
+  let dvt = document.getElementById('dvt');
+  if (dvt.checked) {
+    df.append(addToReport(dvt));
+  }
+
+  let copd = document.getElementById('copd');
+  if (copd.checked) {
+    df.append(addToReport(copd));
+  }
+
+  let otherOpmh = document.getElementById('other');
+  if (otherOpmh.checked) {
+    df.append(getOtherText(otherOpmh));
   }
 
   report.append(df);
   reportSection.classList.remove('hide');
   scrollTo(0, 0);
+}
+function getOtherText(item) {
+  let itemP = document.createElement('p');
+  itemP.classList.add('report');
+  itemP.innerHTML = item.nextElementSibling.children[1].value;
+  return itemP;
 }
 
 function addToReport(item) {
@@ -340,22 +384,6 @@ function addToReport(item) {
   itemP.innerHTML = item.value;
   return itemP;
 }
-
-let hypertension = document.getElementById('hypertension');
-let cad = document.getElementById('cad');
-
-// Other past medical history
-let hypothyroidism = document.getElementById('hypothyroidism');
-let dyslipidemia2 = document.getElementById('dyslipidemia2');
-let heartFailure = document.getElementById('heart-failure');
-let cva = document.getElementById('cva');
-let pe = document.getElementById('pe');
-let bronchialAsthma = document.getElementById('bronchial-asthma');
-let osteoarthritis = document.getElementById('osteoarthritis');
-let tia = document.getElementById('tia');
-let dvt = document.getElementById('dvt');
-let copd = document.getElementById('copd');
-let otherOpmh = document.getElementById('other-text');
 
 // Social history
 let cpSmoking = document.getElementById('cp-smoking');
