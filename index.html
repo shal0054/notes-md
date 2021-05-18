@@ -71,7 +71,7 @@
             <p class="groupLabel">Regarding</p>
             <p>
               <label for="chest-pain-gen">
-                <input id="chest-pain-gen" type="radio" name="regarding" />
+                <input id="chest-pain-gen" type="radio" name="regarding" value="chest pain"/>
                 <span>Chest pain</span>
               </label>
             </p>
@@ -191,14 +191,14 @@
               </label>
             </p>
             <p>
-              <label for="TIA">
+              <label for="tia">
                 <input id="tia" type="checkbox" value="TIA" />
                 <span>TIA</span>
               </label>
             </p>
             <p>
               <label for="dvt">
-                <input id="dvt" type="checkbox" value="dvt" />
+                <input id="dvt" type="checkbox" value="DVT" />
                 <span>DVT</span>
               </label>
             </p>
@@ -1113,7 +1113,7 @@
               <textarea id="plan" class="materialize-textarea"></textarea>
             </div>
           </div>
-          
+
         </form>
       </div>
 
@@ -1125,53 +1125,69 @@
     </div>
   </section>
 
+  <section id="reportSection" class="hide">
+
+    <nav class="z-depth-0">
+      <div class="nav-wrapper container">
+        <div class="col s12">
+          <a onclick="start()" class="breadcrumb black-text myCursor">Start</a>
+          <a onclick="loadAssessment()" class="breadcrumb black-text myCursor">Assessment</a>
+          <a onclick="loadChestPain()" class="breadcrumb black-text myCursor">Chest Pain</a>
+          <a onclick="loadPhysExam()" class="breadcrumb black-text myCursor">Physical Exam</a>
+          <a onclick="loadInves()" class="breadcrumb black-text myCursor">Investigations</a>
+          <a onclick="loadPresPlan()" class="breadcrumb black-text myCursor">Impression & Plan</a>
+          <a class="breadcrumb black-text">Report</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="report" class="container"></div>
+
+  </section>
+
   <!-- UI Script Only -->
   <script>
-    let allSections = document.querySelectorAll('section');
-    function start() {
-      // hide all sections
+    function hideAllSections() {
+      let allSections = document.querySelectorAll('section');
       allSections.forEach((section) => {
         section.classList.add('hide');
       });
+    }
+    function start() {
+      hideAllSections();
       // display general section
       let generalSection = document.getElementById('general');
       generalSection.classList.remove('hide');
     }
     function loadAssessment() {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
       // display general section
       let assessmentSection = document.getElementById('assessment-sec');
       assessmentSection.classList.remove('hide');
     }
     function loadChestPain() {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
       // display chest pain section
       let chestPainSection = document.getElementById('chest-pain-sec');
       chestPainSection.classList.remove('hide');
     }
     function loadPhysExam() {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
       // display physical exam section
       let physicalExamSection = document.getElementById('physical-exam');
       physicalExamSection.classList.remove('hide');
     }
     function loadInves() {
-      // hide all sections
-      allSections.forEach((section) => {
-        section.classList.add('hide');
-      });
+      hideAllSections();
       // display impress-plan section
       let investigationsSection = document.getElementById('investigations');
       investigationsSection.classList.remove('hide');
+    }
+    function loadPresPlan() {
+      hideAllSections();
+      // display impress-plan section
+      let impressPlanSection = document.getElementById('impression-plan');
+      impressPlanSection.classList.remove('hide');
     }
   </script>
 </body>
